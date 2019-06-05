@@ -12,16 +12,54 @@ const max = 3;
 var c_total = 0;
 var h_total = 0;
 
-var list_of_choices = ["Rock", "Paper", "Scissor"];
 var computerChoice;
 
+// Event Listners
+rock_img.addEventListener("click", function() {
+  game("rock", generate_C_choice());
+});
+
+paper_img.addEventListener("click", function() {
+  game("paper", generate_C_choice());
+});
+
+scissors_img.addEventListener("click", function() {
+  game("scissors", generate_C_choice());
+});
+
+// GAME CHOICES
+function game(userChoice, computerChoice) {
+  switch (userChoice) {
+    case "rock": {
+      result("rock", computerChoice.toString());
+      break;
+    }
+    case "paper": {
+      result("paper", computerChoice.toString());
+      break;
+    }
+    case "scissors": {
+      result("scissors", computerChoice.toString());
+      break;
+    }
+    default:
+      break;
+  }
+}
+
+// RESULT
+
 function result(user_value, computer_value) {
+  console.log(user_value + " & " + computer_value);
   chance();
   if (game_level < 11) {
     if (
-      (user_value === "rock" && computer_value === "scissors") ||
-      (user_value === "scissors" && computer_value === "paper") ||
-      (user_value === "paper" && computer_value === "rock")
+      (user_value == "rock" &&
+        computer_value == "scissors") ||
+      (user_value == "scissors" &&
+        computer_value == "paper") ||
+      (user_value == "paper" &&
+        computer_value == "rock")
     ) {
       h_total++;
       var status = 1;
@@ -32,9 +70,12 @@ function result(user_value, computer_value) {
         computer_value;
       highlight(user_value, status);
     } else if (
-      (user_value === "paper" && computer_value === "scissors") ||
-      (user_value === "rock" && computer_value === "paper") ||
-      (user_value === "scissors" && computer_value === "rock")
+      (user_value == "paper" &&
+        computer_value == "scissors") ||
+      (user_value == "rock" &&
+        computer_value == "paper" ) ||
+      (user_value == "scissors" &&
+        computer_value == "rock")
     ) {
       c_total++;
       var status = 0;
@@ -45,9 +86,12 @@ function result(user_value, computer_value) {
         computer_value;
       highlight(user_value, status);
     } else if (
-      (user_value === "rock" && computer_value === "rock") ||
-      (user_value === "paper" && computer_value === "paper") ||
-      (user_value === "scissors" && computer_value === "scissors")
+      (user_value == "rock" &&
+        computer_value == "rock") ||
+      (user_value == "paper" &&
+        computer_value == "paper") ||
+      (user_value == "scissors" &&
+        computer_value == "scissors" )
     ) {
       var status = -1;
       choices.innerHTML =
@@ -65,41 +109,12 @@ function result(user_value, computer_value) {
   check_level(game_level);
 }
 
-// Random number generator
-
-function getRandomInt() {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-
-function getRandomIntUser(value) {
-  return Math.floor(Math.random() * Math.floor(value));
-}
-
-// Chances
+// Chance
 
 function chance() {
   if (game_level < 11) winner.innerHTML = `<i>Chance no: ${game_level}</i>`;
   else {
     winner.innerHTML = "No chance remaining";
-  }
-}
-
-function game(userChoice, computerChoice) {
-  switch (userChoice) {
-    case "rock": {
-      result("rock", computerChoice);
-      break;
-    }
-    case "paper": {
-      result("paper", computerChoice);
-      break;
-    }
-    case "scissors": {
-      result("scissors", computerChoice);
-      break;
-    }
-    default:
-      break;
   }
 }
 
@@ -159,19 +174,6 @@ function highlight(my_value, flag) {
   }
 }
 
-// Event Listners
-  rock_img.addEventListener("click", function() {
-    game("rock", generate_C_choice());
-  });
-
-  paper_img.addEventListener("click", function() {
-    game("paper", generate_C_choice());
-  });
-
-  scissors_img.addEventListener("click", function() {
-    game("scissors", generate_C_choice());
-  });
-
 // check level
 
 function check_level(level) {
@@ -194,17 +196,22 @@ function check_level(level) {
   }
 }
 
+// Random number generator
+
+function getRandomInt() {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 function generate_C_choice() {
   var random_value = getRandomInt();
   var z = "";
 
-  if (random_value === 1) {
-    z = "rock";
-  } else if (random_value === 2) {
+  if (random_value == 0) {
     z = "paper";
-  } else if (random_value === 3) {
+  } else if (random_value == 1) {
+    z = "rock";
+  } else if (random_value == 2) {
     z = "scissors";
-  } else {
   }
   return z;
 }
