@@ -36,10 +36,11 @@ header {
   margin: auto 150px auto 150px;
 }
 
-.score {
+.score, .bottom {
   color: yellow;
   font-size: 3rem;
   font-family: Bungee;
+  text-align: center;
 }
 
 #score-seperator {
@@ -103,6 +104,9 @@ header {
   background-color: green !important;
 }
 
+
+
+
 @media only screen and (max-width: 600px) {
   header {
     padding: 0.1rem;
@@ -145,4 +149,27 @@ header {
   #versus img {
     max-width: 71px;
   }
+  
+  .bottom {
+    color: yellow;
+    font-size: 1.2rem;
+    font-family: Bungee;
+    text-align: center;
+  }
+  
+  .center {
+    display: grid;
+    text-align: center;
+  }
+
+  #r,
+  #s,
+  #p {
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }  
 }

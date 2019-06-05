@@ -22,18 +22,15 @@ function result(user_value) {
     var h = getRandomInt(user_value);
     if (c < h) {
       h_total++;
-      declaration.innerText = "You won this level";
       status = 1;
       highlight(pressed_div, status);
       console.log("HUMAN");
     } else if (c > h) {
       c_total++;
-      declaration.innerText = "Computer won! this level";
       status = 0;
       highlight(pressed_div, status);
       console.log("bot");
     } else {
-      declaration.innerText = "This level's a Draw";
       status = -1;
       highlight(pressed_div, status);
       console.log("DRAW");
