@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bungee+Outline&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #05141a;
+}
+
+header {
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Bungee Outline", cursive;
+  font-size: calc(3.4rem);
+  font-weight: bold;
+  color: rgb(133, 228, 228);
+}
+
+.container {
+  padding: 100px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.score-container {
+  padding: 3rem 0rem 0rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+
+#versus {
+  margin: auto 150px auto 150px;
+}
+
+.score {
+  color: yellow;
+  font-size: 3rem;
+  font-family: Bungee;
+}
+
+#score-seperator {
+  margin: auto 150px;
+  color: aqua;
+  font-family: "Bungee";
+  font-size: 29px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.red {
+  color: #e04955;
+}
+
+.m-top {
+  margin: 2rem 0rem;
+}
+
+.bungee {
+  font-family: "Bungee";
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#winner {
+  color: red;
+  font-size: 1.5rem;
+  font-family: Bungee;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: .1rem;
+    font-size: 1.9rem;
+  }
+  .container {
+    padding: .2rem 0rem 0rem 0rem;
+  }
+  
+  .score-container {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  
+  #versus {
+    margin: auto 10px;
+  }
+  
+  .score {
+    font-size: 1rem;
+  }
+  
+  #score-seperator {
+    margin: auto 15px;
+    font-size: 16px;
+  }
+
+  img{
+      max-width: 100px;
+  }
+
+  #winner{
+      font-size: 20px;
+      padding: 30px 0px;
+  }
+  .m-top {
+    margin: 4rem 0rem 0rem 0rem;
+  }
+
+  #versus img{
+      max-width: 71px;
+  }
+}
