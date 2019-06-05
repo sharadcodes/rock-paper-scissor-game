@@ -159,8 +159,7 @@ function highlight(my_value, flag) {
   }
 }
 
-// MAIN
-function main() {
+// Event Listners
   rock_img.addEventListener("click", function() {
     game("rock", generate_C_choice());
   });
@@ -172,7 +171,6 @@ function main() {
   scissors_img.addEventListener("click", function() {
     game("scissors", generate_C_choice());
   });
-}
 
 // check level
 
@@ -210,4 +208,3 @@ function generate_C_choice() {
   }
   return z;
 }
-main();
