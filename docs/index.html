@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>THE 10 times Rock-Paper-Scissors Game</title>
+    <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/button.css" />
   </head>
   <body>
     <div class="top">
       <header>
-        THE 10 TIMES ROCK-PAPER-SCRISSORS GAME
+        ROCK PAPER SCRISSORS
       </header>
-        <span class="center" id="winner">You got 10 chances to defeat the computer</span>
+        <span class="center" id="winner"><i>CHANCE NO: 1</i></span>
     </div>
 
     <div class="container">
       <span class="player" id="computer">
-        <img src="./assets/img/computer.svg" alt="" width="200px" />
+        <img src="./assets/img/computer.svg" alt="" width="100px" />
       </span>
 
       <span id="versus">
-        <img src="./assets/img/versus.svg" alt="" width="100px;" />
+        <img src="./assets/img/versus.svg" alt="" width="50px;" />
       </span>
 
       <span class="player" id="human">
-        <img src="./assets/img/human.svg" alt="" width="200px" />
+        <img src="./assets/img/human.svg" alt="" width="100px" />
       </span>
     </div>
 
@@ -46,21 +46,18 @@
       </div>
     </div>
 
-    <div class="center m-top">
-      <div role="button" class="retro-btn lg primary" id="play-button">
-        <a class="btn">
-          <span class="btn-inner">
-            <span class="content-wrapper">
-              <span class="btn-content">
-                <span class="btn-content-inner bungee">PLAY</span>
-              </span>
-            </span>
-          </span>
-        </a>
-      </div>
+    <div class="center m-top" id="img-c">
+
+      <img src="./assets/img/rock.svg" alt="" id="r" class="">
+      <img src="./assets/img/paper.svg" alt="" id="p" class="">
+      <img src="./assets/img/scissors.svg" alt="" id="s" class="">
+    
     </div>
 
+    <span id="announce" class="score" style="display:flex; justify-content: center;"></span>
+
+    </span>
+
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/button.js"></script>
   </body>
 </html>
