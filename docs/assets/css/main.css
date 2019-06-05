@@ -78,9 +78,9 @@ header {
   font-family: Bungee;
 }
 
-#r,
-#s,
-#p {
+#rock,
+#scissors,
+#paper {
   height: 200px;
   width: 200px;
   border-radius: 100%;
@@ -162,9 +162,9 @@ header {
     text-align: center;
   }
 
-  #r,
-  #s,
-  #p {
+  #rock,
+  #scissors,
+  #paper {
     height: 100px;
     width: 100px;
     padding: 5px;
