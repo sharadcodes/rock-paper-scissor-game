@@ -50,7 +50,7 @@ function game(userChoice, computerChoice) {
 // RESULT
 
 function result(user_value, computer_value) {
-  console.log(user_value + " & " + computer_value);
+
   chance();
   if (game_level < 11) {
     if (
